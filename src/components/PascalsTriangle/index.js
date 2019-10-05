@@ -5,7 +5,7 @@ import "./style.css";
 // pass down a prop expressing how many rows we need.
 // create an empty state with a base array
 // render each row with the base array.
-//
+
 class PascalsTriangle extends Component {
   constructor(props) {
     super(props);
