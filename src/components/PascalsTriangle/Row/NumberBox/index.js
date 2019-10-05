@@ -6,7 +6,7 @@ class NumberBox extends Component {
     super(props);
   }
   render() {
-    return <div className="number-box">1</div>;
+    return <div className="number-box">{this.props.number}</div>;
   }
 }
 
