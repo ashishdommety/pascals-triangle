@@ -1,9 +1,15 @@
 import React from "react";
 import "./App.css";
-import PascalsTriangle from "./components/PascalsTriangle";
+import PascalsTriangleContainer from "./containers/PascalsTriangleContainer";
+import FormContainer from "./containers/FormContainer";
 
 function App() {
-  return <PascalsTriangle numberOfRows={5} />;
+  return (
+    <div>
+      <FormContainer />
+      <PascalsTriangleContainer />
+    </div>
+  );
 }
 
 export default App;
