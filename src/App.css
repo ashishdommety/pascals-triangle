@@ -3,3 +3,8 @@
   --base-red: #aa3939;
   --dark-red: #801515;
 }
+
+body {
+  background-color: var(--base-red);
+  text-align: center;
+}
