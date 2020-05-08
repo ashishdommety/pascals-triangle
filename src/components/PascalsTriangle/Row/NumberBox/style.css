@@ -1,6 +1,6 @@
 .number-box {
-  height: 50px;
-  width: 50px;
+  min-height: 50px;
+  min-width: 50px;
   background-color: var(--light-red);
   margin: 2px;
   border-radius: 3px;
