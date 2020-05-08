@@ -1,7 +1,7 @@
 import { connect } from "react-redux";
-import PascalsTriangle from "../../components/PascalsTriangle";
+import PascalsTriangle from "../../components/PascalsTriangle/index.tsx";
 
-let mapStateToProps = state => {
+let mapStateToProps = (state) => {
   return { rows: state.rows, triangle: state.triangle };
 };
 

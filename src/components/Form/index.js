@@ -4,10 +4,6 @@ import Button from "./Button";
 function Form(props) {
   const [rowCount, updateRowCount] = useState(0);
 
-  useEffect(() => {
-    console.log(`useEffect was triggered`);
-  });
-
   return (
     <div>
       <p
