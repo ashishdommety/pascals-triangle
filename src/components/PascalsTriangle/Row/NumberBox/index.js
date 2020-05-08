@@ -6,7 +6,7 @@ let NumberBox = (props) => {
 
   return (
     <div
-      className={`number-box ${boxState ? "selected" : "not-selected"}`}
+      className={`number-box ${boxState ? "selected" : ""}`}
       onClick={() => updateSelected(!boxState)}
     >
       <span className="number">{props.number}</span>

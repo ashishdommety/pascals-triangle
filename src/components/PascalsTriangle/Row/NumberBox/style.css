@@ -1,9 +1,12 @@
 .number-box {
   min-height: 50px;
   min-width: 50px;
-  background-color: var(--light-red);
   margin: 2px;
   border-radius: 3px;
+}
+
+.selected {
+  background-color: var(--light-red);
 }
 
 .number {
