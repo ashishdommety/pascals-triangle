@@ -1,26 +1,13 @@
-import React from "react";
+import React, { useState } from "react";
 import Button from "./Button";
 
-class Form extends React.Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return (
-      <div>
-        <Button
-          value="+"
-          behavior={this.props.increaseRow}
-          update={this.props.updateRow}
-        />
-        <Button
-          value="-"
-          behavior={this.props.decreaseRow}
-          update={this.props.updateRow}
-        />
-      </div>
-    );
-  }
+function Form(props) {
+  return (
+    <div>
+      <Button value="+" behavior={props.increaseRow} update={props.updateRow} />
+      <Button value="-" behavior={props.decreaseRow} update={props.updateRow} />
+    </div>
+  );
 }
 
 export default Form;
