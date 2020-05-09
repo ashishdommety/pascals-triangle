@@ -3,8 +3,10 @@ import Row from "./Row";
 import { useSelector } from "react-redux";
 import "./style.css";
 
-let PascalsTriangle: any = (props: any) => {
-  const triangle = useSelector((state: any) => state.triangle);
+let PascalsTriangle: any = () => {
+  const triangle = useSelector((state: any) => {
+    return state.triangle;
+  });
 
   let createTriangle = () => {
     return triangle.map((x: number[], i: number) => (
@@ -14,7 +16,13 @@ let PascalsTriangle: any = (props: any) => {
 
   return (
     <div className="pascals-triangle">
-      {triangle !== undefined ? createTriangle() : <span></span>}
+      {triangle.length ? (
+        createTriangle()
+      ) : (
+        <p style={{ color: `white`, fontSize: `20px` }}>
+          No rows exist. This Pascal's triangle is empty.
+        </p>
+      )}
     </div>
   );
 };
