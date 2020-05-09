@@ -5,12 +5,12 @@ let triangle = (state = { rows: 0, triangle: [] }, action) => {
     case "increaseRow":
       return {
         rows: state.rows + 1,
-        triangle: calculatePascalsTriangle(state.rows),
+        triangle: calculatePascalsTriangle(state.rows + 1),
       };
     case "decreaseRow":
       return {
         rows: state.rows - 1,
-        triangle: calculatePascalsTriangle(state.rows),
+        triangle: calculatePascalsTriangle(state.rows - 1),
       };
     default:
       return state;
