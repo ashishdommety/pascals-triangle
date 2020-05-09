@@ -1,13 +1,13 @@
 import React from "react";
 import "./App.css";
-import PascalsTriangleContainer from "./containers/PascalsTriangleContainer";
-import FormContainer from "./containers/FormContainer";
+import PascalsTriangle from "./components/PascalsTriangle";
+import Form from "./components/Form";
 
 function App() {
   return (
     <div>
-      <FormContainer />
-      <PascalsTriangleContainer />
+      <Form />
+      <PascalsTriangle />
     </div>
   );
 }

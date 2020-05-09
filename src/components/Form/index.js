@@ -1,27 +1,15 @@
 import React, { useState } from "react";
-import { useSelector, useDispatch } from "react-redux";
+import { increaseRow, decreaseRow } from "../../actions/index.tsx";
 import Button from "./Button";
 
 function Form(props) {
   const [rowCount, updateRowCount] = useState(0);
 
-  const dispatch = useDispatch();
-  const rows = useSelector((state) => {
-    console.log(state);
-    return state.rows;
-  });
-
   return (
     <div>
-      <p
-        style={{ color: "white" }}
-        id="row-count"
-        onClick={() => updateRowCount(rowCount + 1)}
-      >
-        You clicked me {rowCount} times.
-      </p>
-      <Button value="+" behavior={props.increaseRow} update={props.updateRow} />
-      <Button value="-" behavior={props.decreaseRow} update={props.updateRow} />
+      <p style={{ color: "white" }}>Click to add a row.</p>
+      <Button value="+" action={increaseRow} />
+      <Button value="-" action={decreaseRow} />
     </div>
   );
 }
