@@ -1,18 +1,15 @@
 import React from "react";
+import "./style.css";
+import { useSelector, useDispatch } from "react-redux";
 
-class Button extends React.Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick = e => {
-    e.preventDefault();
-    this.props.behavior();
-    this.props.update();
-  };
-  render() {
-    return <button onClick={this.handleClick}>{this.props.value}</button>;
-  }
+function Button(props) {
+  const dispatch = useDispatch();
+
+  return (
+    <button onClick={() => dispatch({ type: props.action })} className="button">
+      {props.value}
+    </button>
+  );
 }
 
 export default Button;

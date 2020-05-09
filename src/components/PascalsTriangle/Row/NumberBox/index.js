@@ -1,13 +1,17 @@
-import React, { Component } from "react";
+import React, { useState } from "react";
 import "./style.css";
 
-class NumberBox extends Component {
-  constructor(props) {
-    super(props);
-  }
-  render() {
-    return <div className="number-box">{this.props.number}</div>;
-  }
-}
+let NumberBox = (props) => {
+  const [boxState, updateSelected] = useState(false);
+
+  return (
+    <div
+      className={`number-box ${boxState ? "selected" : ""}`}
+      onClick={() => updateSelected(!boxState)}
+    >
+      <span className="number">{props.number}</span>
+    </div>
+  );
+};
 
 export default NumberBox;

@@ -1,5 +1,19 @@
 .number-box {
-  height: 50px;
-  width: 50px;
-  border: 1px solid black;
+  min-height: 50px;
+  min-width: 50px;
+  margin: 2px;
+  border-radius: 3px;
+  cursor: pointer;
+}
+
+.selected {
+  background-color: var(--light-red);
+}
+
+.number {
+  display: block;
+  height: 100%;
+  position: relative;
+  top: 15px;
+  color: white;
 }
